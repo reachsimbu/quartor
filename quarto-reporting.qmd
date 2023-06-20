@@ -1,0 +1,859 @@
+---
+title: "Hunting for Mutibagger <br> with VRS"
+author: "Simbu"
+date: today
+format: 
+  revealjs:
+    self-contained: false
+    slide-number: c/t
+    width: 1600
+    height: 1200
+    # logo: "Simbu.png"
+    footer: "[thomasmock.quarto.pub/reports-presentations](https://thomasmock.quarto.pub/reports-presentations/)"
+    theme: ["simple", "styles.scss"]
+    echo: true
+    multiplex: true
+    code-link: true
+    title-slide-attributes:
+      data-background-color: "#FAF0E4"
+editor: source
+---
+
+
+## Investing Principle
+
+-  #1  Never Lose Money
+-  #2  Never forget the rule #1
+
+
+ `Warren Buffet` Said this long back in 1980s and lets explore on what he is saying!
+
+## Buffets Violation of the Rules
+
+- Dexter Shoe ^[In 1993 Berkshire Bought `Dexter Shoes` for *$433 Million* and lost $3.5 Billion : In his 2007 Annual letter he quoted : What i had assessd as a durable advantage vanished within few years..In essence i gave away 1.6percent of a wonderful business - one now valued at $220 Billion - to buy a worthless business]
+- Tesco ^[In 2014 Annual letter he quoted : *We sold Tesco shares throughout the year and now we are out of tis position,Our Loss from this business was $444 Million*]
+- Covid-19 Panic ^[Covid Panic Meltdown : Buffet sold his all airline stocks - He had invested $8 Billion in 4 Airlines (American,Delta,Southwest,United) - He quoted - *It Turned out I was wrong in it*]
+
+::: aside
+Lets See:
+:::
+
+## The RULE
+<br>
+Despite Losing money occasionally  ,What is `Buffet` suggesting us to do / act on *`Never Lose Money`*
+
+<br>
+
+. . .
+
+**Think about Risk First , Not Return** <br>
+<br>
+We Should focus on minimizing type-1 error which is efficient in longer run than making type-2 error
+
+**Volatility-Minimizing ** - YAML style<br>
+
+
+
+
+
+
+
+## Avoid Big Risks
+
+<br>
+
+![](images/deer.jpg){fig-alt="Screenshot of 6 bootswatch themes"}
+
+
+
+# Humans and Animal Instincts {background-color="#447099"}
+
+<br>
+
+We know that deer we see today is came from ungulates about 30 million years ago.
+
+<br>
+
+They have survived millions of years amid ferocious predators by being *very sensitive to making type 1 Errors* - _Errors of not being careful_
+
+. . .
+
+<br>
+
+*Type 1 Error - Commission* - Mistakenly Prey draws near the waterhole while the predator is ready and waiting , it life ends.
+
+<br>
+
+*Type 2 Error - Omission* - Means avoiding the waterhole where no predator is waiting.
+
+. . .
+<br>
+Obviously , Some Individual deer do end up making the error of commissioning Type 1 Error by drinking at watering holes when predators are present thats what we see on our TV Channels (NatGeo / Discovery)  with excitement on how predators are attacking the deer.
+
+<br>
+<!-- We have seen videos where how vigilant deers,zebras,antelopes and other preys are , They seem to see danger when there is none,But it is this alertness that has allowed them to survive and thrive for millions of years. -->
+
+<br>
+
+*BUT SPECIES AS A WHOLE HAS DONE REMARKABLY WELL by not making TYPE 1 Error*
+
+## Fatal Type 1 Error
+![](images/dodo.jpeg){fig-alt="DODO Bird"}
+<!-- ``` markdown -->
+<!-- ::: {.class} -->
+<!-- All this content can be modified -->
+<!-- ::: -->
+<!-- ``` -->
+
+
+
+
+## DODO Extinction
+
+-   Dodo Bird was spotted by sailors in 1507s and went extinct by 1681 on the isolated island.
+-   They were not afraid of `Human Invaders on the island`.
+-   They committed the *cardinal TYPE - 1 Error* .
+
+. . .
+
+They should not avoid the humans when they should have , which led to their extinction on our planet.
+
+
+
+## Human Instinct in Investing
+. . .
+
+::: panel-tabset
+## Type 1 Error
+
+
+-   Invest in a company where the probability of losing a money is higher than the probability of making money
+-   In Other words - Investing in a sector / company that we think it might do well in the future , `Without analysing properly `.
+
+## Type 2 Error
+
+-   Not Invest in a company where the probability of making a money is higher than the probability of losing money
+-   In Other words - Investing in a sector / company that we think its bad `Without analysing properly `, But it does extraordinarily well
+
+## Goal
+
+-   Our Goal should be to *Minimize the Type 1 error* to the larger extent for the maximizing Return to reach the promise land.
+-   Simple words - We should avoid the capital loss at any extent.
+
+:::
+
+
+## Tabsets
+
+    ::: {.panel-tabset}
+    ## Code
+    ```{{r}}
+    #| echo: fenced
+    #| eval: false
+    head(mtcars)
+    ```
+
+
+    ## Output
+    ```{{r}}
+    #| eval: true
+    #| echo: false
+    head(mtcars)
+    ```
+    :::
+
+## Pandoc bracketed spans
+
+This is [magic text]{.fragment}
+
+. . .
+
+``` markdown
+# this only works in presentations
+This is [Investing]{.fragment}
+```
+
+. . .
+
+Structure:
+
+-   Surround text with `[text]`
+-   Add curly brackets to indicate the start/end of class `{.class}` or `{sometimes-class}`
+
+## Footnotes
+
+You can create inline footnotes like so: `some inline text with a^[footnote]`
+
+. . .
+
+If you hover your mouse over the citation and footnote in this sentence you'll see a popup displaying the reference contents:
+
+``` yaml
+format:
+  html:
+    citations-hover: true
+    footnotes-hover: true
+```
+
+. . .
+
+<br>
+
+``` markdown
+For example, did you know that Howard is a dog^[Specifically he is a Boston Terrier, although
+sometimes he acts like a cat]?
+```
+
+## Unified syntax
+
+Layout image inline with paragraphs
+
+``` markdown
+::: {layout="[[30, 70], [100]]"}
+![Terrier Seated](Terrier_Seated_(Boston_Public_Library).jpeg){width="50%" fig-alt="Description of boston terrier"} 
+
+...paragraph 1... 
+
+...paragraph 2...
+
+:::
+```
+
+. . .
+
+Put image into the "gutter"/column margin
+
+``` markdown
+![A young male Boston Terrier with a Brown brindle coat](330px-Boston_Terrier_male.jpeg){.column-margin fig-alt="Description of a young male Boston Terrier with a Brown brindle coat"}
+```
+
+. . .
+
+Add footnotes:
+
+``` markdown
+The average life span of a Boston Terrier is around 11 to 13 years.^["The Boston Terrier Club Of America". Bostonterrierclubofamerica.org.]
+```
+
+# Code {background-color="#447099"}
+
+## Hide all code
+
+``` yaml
+format: html
+execute:
+  echo: false
+```
+
+. . .
+
+Turn back on at individual code-block level:
+
+``` r
+#| echo: true
+```
+
+## Fold code
+
+``` yaml
+format:
+  html:
+    code-fold: true
+    code-summary: "Hidden code"
+```
+
+. . .
+
+Turn on at individual code-block level:
+
+``` r
+#| code-fold: true
+#| code-summary: "Hidden code"
+```
+
+## Code tools
+
+``` yaml
+format:
+  html:
+    code-fold: true
+    code-tools: true
+```
+
+. . .
+
+![](https://quarto.org/docs/output-formats/images/code-tools-01.png){fig-alt="Screenshot of Quarto document with the Code tools dropdown"}
+
+## Code tools, source
+
+> For example, here we specify that we want only "View Source" (no toggling of code visibility) and no caption on the code menu:
+
+``` yaml
+format:
+  html: 
+    code-tools:
+      source: true
+      toggle: false
+      caption: none
+```
+
+. . .
+
+![](https://quarto.org/docs/output-formats/images/code-tools-source.png){fig-alt="Screenshot of Quarto document with the source option overlay"}
+
+## Code tools, source repo
+
+In some situations (especially for longer documents), you may prefer to send viewers to the source code on a version-control website rather than the built in viewer.
+
+. . .
+
+``` yaml
+format:
+  html: 
+    code-tools:
+      source: https://github.com/quarto-dev/quarto-web/blob/main/index.md
+```
+
+# AmaraRaja in Numbers {background-color="#447099"}
+
+## Key Growth Ratios  {background-color="#F9F5F6"}
+
+```{r}
+#| message: false
+#| echo: false
+
+
+library(tidyverse)
+library(reactable)
+library(reactablefmtr)
+library(dataui)
+library(sparkline)
+library(janitor)
+library(grDevices)
+
+amb_g <- read_csv("ambg.csv",local = locale(encoding = "latin1"))%>%clean_names()%>%
+  select(growth,everything())
+
+amb_g<-amb_g%>%
+  select(KGI='growth',M2014='mar_14',
+         M2015='mar_15',M2016='mar_16',
+         M2017='mar_17',M2018='mar_18',
+         M2019='mar_19',M2020='mar_20',
+         M2021='mar_21',M2022='mar_22',
+         M2023='mar_23')
+
+orange_pal <- function(x) rgb(colorRamp(c("#A5C9CA", "#6096B4"))(x), maxColorValue = 255)
+
+
+amb_gt<-amb_g%>%
+  select(KGI,M2019,M2020,M2021,M2022,M2023)
+
+reactable(
+  amb_gt,
+  columns = list(
+    #KGI=colDef(headerStyle = list(position = "sticky", left = 0, background = "#fff", zIndex = 1)),
+    KGI = colDef(
+      style = list(position = "sticky", left = 0, background = "#fff", zIndex = 1),
+      headerStyle = list(position = "sticky", left = 0, background = "#fff", zIndex = 1),width = 280
+    ),
+        M2019 = colDef(cell = data_bars(amb_gt, 
+                                     text_position = "above", 
+                                     fill_color = c("#F24C3D","#1B9C85"),
+                                     number_fmt = scales::percent),format = colFormat(percent = TRUE, digits = 1)),
+    M2020 = colDef(cell = data_bars(amb_gt, 
+                                     text_position = "above", 
+                                     fill_color = c("#F24C3D","#1B9C85"),
+                                     number_fmt = scales::percent),format = colFormat(percent = TRUE, digits = 1)),
+    M2021 = colDef(cell = data_bars(amb_gt, 
+                                           text_position = "above", 
+                                     fill_color = c("#F24C3D","#1B9C85"),
+                                           number_fmt = scales::percent),format = colFormat(percent = TRUE, digits = 1)),
+    M2022 = colDef(cell = data_bars(amb_gt, 
+                                     text_position = "above", 
+                                     fill_color = c("#F24C3D","#1B9C85"),
+                                     number_fmt = scales::percent),format = colFormat(percent = TRUE, digits = 1)),
+    M2023 = colDef(style = function(value) {
+      normalized <- (value - min(amb_gt$M2023)) / (max(amb_gt$M2023) - min(amb_gt$M2023))
+      color <- orange_pal(normalized)
+      list(background = color)
+    })
+    
+    ),
+  
+  defaultColDef = colDef(
+    format = colFormat(percent = TRUE, digits = 1))
+  )
+
+
+```
+
+## Key Growth Ratios - Trend {background-color="#F9F5F6"}
+
+```{r}
+#| message: false
+#| echo: false
+
+library(tidyverse)
+library(reactable)
+library(reactablefmtr)
+library(dataui)
+library(sparkline)
+library(janitor)
+
+
+amb_tran<-amb_g %>%
+  # drop_na()%>%
+  # select(-inference)%>%
+  mutate(M2014 = replace_na(M2014, 0),
+         M2015 = replace_na(M2015, 0),
+         M2016 = replace_na(M2016, 0),
+         M2017 = replace_na(M2017, 0),
+         M2018 = replace_na(M2018, 0),
+         M2019 = replace_na(M2019, 0),
+         M2020 = replace_na(M2020, 0),
+         M2021 = replace_na(M2021, 0),
+         M2022 = replace_na(M2022, 0),
+         M2023 = replace_na(M2023, 0))%>%
+  mutate(M2014 = M2014*100,
+         M2015 = M2015*100,
+         M2016 = M2016*100,
+         M2017 = M2017*100,
+         M2018 = M2018*100,
+         M2019 = M2019*100,
+         M2020 = M2020*100,
+         M2021 = M2021*100,
+         M2022 = M2022*100,
+         M2023 = M2023*100) %>%
+  group_by(KGI)%>%
+  pivot_longer(cols = c(M2014:M2023),names_to = 'Years',values_to = 'Values')
+
+amb_tran %>%
+  group_by(KGI) %>%
+  summarize(Values = list(Values)) %>%
+  select(KGI,'10yrTrend'='Values')%>%
+  reactable(.,
+            columns = list('10yrTrend' = colDef( cell = react_sparkline(
+              .,
+              height = 80,
+              show_area = TRUE,
+              tooltip_type = 1
+            ))))%>%
+  add_title("Key Ratios of AmaraRaja", align = "center", font_color = "#73A9AD")
+```
+
+## Code highlighting
+
+
+
+```{r}
+#| message: false
+#| echo: false
+
+
+library(tidyverse)
+library(reactable)
+library(reactablefmtr)
+library(dataui)
+library(sparkline)
+library(janitor)
+
+
+amb_kdi <- read_csv("ambkdi.csv",local = locale(encoding = "latin1"))%>%
+  select(KDI,everything())
+
+blue_pal <- function(x) rgb(colorRamp(c("#A5C9CA", "#6096B4"))(x), maxColorValue = 255)
+brown_pal <- function(x) rgb(colorRamp(c("#FFD89C", "#C38154"))(x), maxColorValue = 255)
+
+
+amb_kdi_gt<-amb_kdi%>%
+  select(KDI,M2019,M2020,M2021,M2022,M2023,Inference)
+
+reactable(
+  amb_kdi_gt,
+  columns = list(
+    #KGI=colDef(headerStyle = list(position = "sticky", left = 0, background = "#fff", zIndex = 1)),
+    M2019 = colDef(style = function(value) {
+      normalized <- (value - min(amb_kdi_gt$M2019)) / (max(amb_kdi_gt$M2019) - min(amb_kdi_gt$M2019))
+      color <- brown_pal(normalized)
+      list(background = color)
+    }),
+    M2020 = colDef(style = function(value) {
+      normalized <- (value - min(amb_kdi_gt$M2020)) / (max(amb_kdi_gt$M2020) - min(amb_kdi_gt$M2020))
+      color <- brown_pal(normalized)
+      list(background = color)
+    }),
+    M2021 = colDef(style = function(value) {
+      normalized <- (value - min(amb_kdi_gt$M2021)) / (max(amb_kdi_gt$M2021) - min(amb_kdi_gt$M2021))
+      color <- brown_pal(normalized)
+      list(background = color)
+    }),
+    M2022 = colDef(style = function(value) {
+      normalized <- (value - min(amb_kdi_gt$M2022)) / (max(amb_kdi_gt$M2022) - min(amb_kdi_gt$M2022))
+      color <- brown_pal(normalized)
+      list(background = color)
+    }),
+    M2023 = colDef(style = function(value) {
+      normalized <- (value - min(amb_kdi_gt$M2023)) / (max(amb_kdi_gt$M2023) - min(amb_kdi_gt$M2023))
+      color <- blue_pal(normalized)
+      list(background = color)
+    }),
+    Inference = colDef(width = 400)
+  )
+  # defaultColDef = colDef(
+  #   format = colFormat(percent = TRUE, digits = 1))
+)%>%
+  add_title("Key Indicators on Debt/Asset : AMARAJABAT",align = "center", font_color = "#213555") %>%
+  add_subtitle("All Consolidated Figures in Rs.Cr",align = "center", font_color = "#6096B4")
+
+
+```
+
+
+. . .
+
+
+
+
+
+## Code linking with [`downlit`](https://downlit.r-lib.org/)
+
+> The goal of `downlit` is to provide syntax highlighting and automatic linking of R code
+
+``` yaml
+format:
+  html:
+    code-link: true
+```
+
+# Aesthetics {background-image="images/howard-gentleman.jpeg" background-size="contain" background-position="right" background-color="black"}
+
+## HTML Appearance
+
+Out of the box, Quarto is styled with Bootstrap 5 and opinionated defaults.
+
+Bootstrap is the most popular CSS Framework for responsive websites, where v5 is the latest.
+
+. . .
+
+Quarto comes pre-installed with 25 themes from [Bootswatch](https://bootswatch.com/) and you can use them like so:
+
+``` yaml
+---
+format:
+  html:
+    theme: litera
+---
+```
+
+<br>
+
+. . .
+
+Or you can customize a theme with CSS/SCSS/SASS.
+
+``` yaml
+---
+format:
+  html:
+    theme: 
+      - litera
+      - custom.scss
+---
+```
+
+## Bootswatch themes
+
+![](images/bootswatch.png){fig-alt="Screenshot of 6 bootswatch themes"}
+
+## PDF Articles
+
+``` yaml
+format:
+  pdf:
+    template: mytemplate.tex
+```
+
+. . .
+
+<br>
+
+See more on Journal Articles at <https://github.com/quarto-journals/>
+
+::: columns
+::: {.column .fragment width="35%"}
+``` yaml
+----
+title: "My Document"
+toc: true
+format:
+   acm-pdf: default
+   acm-html: default
+---
+```
+:::
+
+::: {.column .fragment width="60%"}
+![](images/jss.png){fig-alt="Screenshot of a rendered Quarto document to the Journal of Statistical Science format."}
+:::
+:::
+
+## More PDF + LaTeX templates
+
+Great work from the NFMS Open Science team on "Quarto titlepages": <https://nmfs-opensci.github.io/quarto_titlepages/>
+
+> The tex templates were written by [Eli Holmes](https://github.com/eeholmes) and the lua filter along with changes to the Pandoc templates to allow themes was written by [Mickaël Canouil](https://github.com/mcanouil).
+
+. . .
+
+![](https://nmfs-opensci.github.io/quarto_titlepages/images/bg-image.png){fig-alt="A screenshot of the titlepages Quarto output PDF. It has a logo, along with the title information and the affiliations of the authors."}
+
+# Presentations {background-color="#FAF0E4"}
+
+## Output types
+
+-   Quarto supports a variety of formats for creating presentations, including:
+
+    -   `revealjs` --- [reveal.js](https://quarto.org/docs/presentations/revealjs/) (HTML)
+
+    -   `pptx` --- [PowerPoint](https://quarto.org/docs/presentations/powerpoint.html) (MS Office)
+
+    -   `beamer` --- [Beamer](https://quarto.org/docs/presentations/beamer.html) (LaTeX/PDF)
+
+## Follow-up reading
+
+-   Emil Hvitfeldt's [Slidecraft 101: Colors and Fonts](https://www.emilhvitfeldt.com/post/slidecraft-colors-fonts/)
+-   Meghan Hall's [Quarto Slides](https://meghan.rbind.io/blog/quarto-slides/)
+
+## Shared structures
+
+-   Incremental reveal/lists
+-   Multiple columns for layout
+-   Title/subtitle/author/etc
+-   Headings
+-   Code/Output
+
+## Creating slides
+
+``` code
+---
+format: revealjs
+---
+
+## Slide 1
+
+## Slide 2
+```
+
+## Incremental Lists
+
+Controllable via YAML:
+
+``` yaml
+format:
+  pptx:
+    incremental: true
+```
+
+. . .
+
+Or turn on/off via fenced divs:
+
+::: columns
+::: {.column .fragment width="45%"}
+``` markdown
+::: {.incremental}
+
+- Howard sleeps
+- Howard sprints
+
+:::
+```
+:::
+
+::: {.column .fragment width="45%"}
+``` markdown
+::: {.nonincremental}
+
+- Howard eats
+- Howard sleeps
+
+:::
+```
+:::
+:::
+
+## Multiple Columns
+
+``` markdown
+:::: {.columns}
+
+::: {.column width="50%" .fragment}
+Left column
+:::
+
+::: {.column width="50%" .fragment}
+Right column
+:::
+
+::::
+```
+
+# Presentations with `format: revealjs` {background-color="#447099"}
+
+## SECRET TIP
+
+<kbd>Alt + Click</kbd> to Zoom in to a section
+
+::: {.absolute .fragment bottom="25" left="100"}
+![](images/howard-gentleman.jpeg){width="150" fig-alt="Howard dressed as a victorian gentleman"}
+:::
+
+## Absolute Position
+
+Absolute position allows for tight control of placement.
+
+. . .
+
+``` markdown
+::: {.absolute bottom=25 left=100 .fragment}
+
+![](images/howard-gentleman.jpeg){width=150 fig-alt="Howard dressed as a victorian gentleman"}
+
+:::
+```
+
+## `output-location: column-fragment`
+
+```{r}
+#| echo: fenced
+#| output-location: column-fragment
+library(ggplot2)
+
+ggplot(mtcars, aes(x = mpg, y = disp)) +
+  geom_point()
+```
+
+## Themes
+
+Quarto comes with 10 built-in themes:
+
+`beige`, `blood`, `dark`, `default`, `league`, `moon`, `night`, `serif`, `simple`, `sky`, `solarized`
+
+. . .
+
+``` yaml
+---
+title: "Presentation"
+format:
+  revealjs: 
+    theme: [simple, custom.scss]
+---
+```
+
+## Themes + SCSS/SASS
+
+``` css
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/*-- scss:defaults --*/
+
+$link-color: #EE6331;
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-monospace: 'Fira Mono', monospace;
+
+$presentation-title-slide-text-align: left;
+
+/*-- scss:rules --*/
+
+h2 {
+  color: #447099 !important;
+}
+```
+
+## Footer/Logo
+
+``` yaml
+---
+format:
+  revealjs:
+    logo: "pic1.png"
+    footer: "Footer text"
+---
+```
+
+. . .
+
+``` yaml
+---
+format:
+  revealjs:
+    logo: "https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png"
+    footer: "[Reports and Presentations with Quarto](https://thomasmock.quarto.pub/reports-presentations/)"
+---
+```
+
+. . .
+
+
+## Custom classes
+
+From Emil's [article](https://www.emilhvitfeldt.com/post/slidecraft-colors-fonts/):
+
+``` css
+*-- scss:rules --*/
+
+.blue {
+  color: $theme-blue;
+  font-weight: bold;
+}
+
+.yellow {
+  color: $theme-yellow;
+  font-weight: bold;
+}
+```
+
+. . .
+
+``` markdown
+[Quarto]{.blue} enables you to weave together [content]{.yellow} and 
+[executable code]{.yellow} into a **finished presentation**. 
+To learn more about [Quarto]{.blue} presentations see <https://quarto.org/docs/presentations/>.
+```
+
+## Custom Classes
+  
+![](https://www.emilhvitfeldt.com/post/slidecraft-colors-fonts/theme-example-highlight.png){fig-alt="Screenshot of Quarto presentation with specific text highlighted yellow/blue."}
+
+## Applying classes
+
+Use bracketed spans: `[text to color]{.yellow}` or use RStudio's Visual Editor:
+
+::: columns
+::: {.column .fragment width="45%"}
+![](https://www.emilhvitfeldt.com/post/slidecraft-colors-fonts/apply-class-2.png)
+:::
+
+::: {.column .fragment width="45%"}
+![](https://www.emilhvitfeldt.com/post/slidecraft-colors-fonts/apply-class-3.png)
+:::
+:::
+
+## The end!
+
+Read all the docs at <https://quarto.org/docs/guide/>
+
+### Reports
+
+-   [Quarto docs: Documents](https://quarto.org/docs/output-formats/html-basics.html)
+-   [Quarto Gallery: Articles + Reports](https://quarto.org/docs/gallery/#articles-reports)
+-   [Quarto Journal Articles](https://quarto.org/docs/journals/index.html)
+-   "Quarto titlepages": <https://nmfs-opensci.github.io/quarto_titlepages/>
+
+### Presentations
+
+-   [Quarto docs: Presentations](https://quarto.org/docs/presentations/)
+-   [Quarto Gallery: Presentations](https://quarto.org/docs/gallery/#presentations)
+-   Emil Hvitfeldt's [Slidecraft 101: Colors and Fonts](https://www.emilhvitfeldt.com/post/slidecraft-colors-fonts/)
+-   Meghan Hall's [Quarto Slides](https://meghan.rbind.io/blog/quarto-slides/)
+-   Andrew Heiss' Quarto slides on [APIs and webscraping with R](https://github.com/andrewheiss/2022-seacen)
